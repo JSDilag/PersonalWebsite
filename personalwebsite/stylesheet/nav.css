@@ -1,0 +1,42 @@
+.navbar {
+    margin-bottom: 0;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+}
+
+
+.navbar-brand{
+    padding: 5px;
+    padding-left: 20px;
+
+}
+
+.navbar-default{
+    background-color: #000000;
+    border-style: none;
+    border-radius: 0;
+}
+
+.navbar-brand img {  height: 60px;  }
+
+
+
+.caret {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid white;
+}
+
+.navbar-default .navbar-nav>li>a{
+    color: white; font-size: 20px;  margin-top: 10px; margin-right: 10px;
+    font-weight: normal;
+    border-bottom: 1px solid transparent;
+}
+
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: crimson;
+}
+
+

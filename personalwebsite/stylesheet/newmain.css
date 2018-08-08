@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Rockwell;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+#maincontent {
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    z-index: 50;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    transition: opacity 1s;
+    color: ghostwhite;
+    display: table;
+    font-size: 100px;
+}
+
+#maincontent:hover{
+    opacity: 1
+}
+
+#maincontent span{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-shadow: 3px 3px 3px #000;
+
+}
+
+.slides{
+    height: 599px;
+    wdith: 100%;
+}
+/*#maincontent .opaque {*/
+    /*background: rgba(0,0,0,.7);*/
+
+
+/*}*/
+
+
+
+#background-div{
+    background-image: url("../img/dumbos_view.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+    width: 100%;
+    overflow: hidden;
+    transition: background-position 3s;
+}

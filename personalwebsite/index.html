@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="stylesheet/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,900italic,700italic,300italic,300' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="scripts/typed.js"></script>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('body').imagesLoaded({background: '.slides'}, function(){
+                $('#preloader').fadeOut(1000);
+            })
+        })
+    </script>
+    <link rel="icon" href="img/jd_logo.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hey, I'm John.</title>
+
+
+</head>
+<body>
+<div id="preloader">
+</div>
+<div id="slide1" class="slides">
+    <div id="intro">
+        <div id="intro-wrap">
+            <h1>Hey, I'm John.</h1>
+            <h2>I developed this personal website so you can get
+                to know more about me, my interests, and the work I've done.</h2>
+            <a href="#1" onclick="navigate('#slide2');" style="color: white; font-size: 18px">Let's progress ></a>
+        </div>
+    </div>
+
+</div>
+<div id="slide2" class="slides">
+    <div id="sbulogo"></div>
+    <div id=brief" class="content">
+        <h1 style="display: inline">Brief</h1>
+        <hr/>
+        <div id="brief-wrap">
+            <div id="profile">
+                <img  src="img/profile.PNG"/>
+
+            </div>
+            <div class="words">
+                <p>A brief about me. I am 24 years old and develop software for a living. I was born in Queens, raised in Bronx and graduated from Stony Brook
+				University with a Bachelor's in Computer Science. I learn to keep my mind stimulated. I exercise to keep my mind sharp. Nowadays, I enjoy the luxuries of travelling to
+				new cities (San Francisco was beautiful), eating new foods and experiencing new experiences. Other than that, nothing beats watching a quality contemporary movie or discovering a music genre I didn't know I liked.
+				Who knew Southern Blues Rock would sound so good? 		
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="progress">
+    <a href="#2" onclick="navigate('#slide3');" style="color: black;">progress ></a>
+    </div>
+
+</div>
+<div id="slide3" class="slides">
+    <!--<span class="slide3-decor" id="opentag">-->
+        <!--&lt;div <span style="color: gainsboro">id=</span><span style="color: #5b994b;">"slide3"</span>&gt;-->
+    <!--</span>-->
+    <!--<span class="slide3-decor" id="closetag">&lt;/div&gt;</span>-->
+
+    <div id="projects" class="content">
+        <!--<h1>&lt;h1&gt;Live&lt;/h1&gt;</h1>-->
+        <h1 style="display: inline">Live</h1>
+
+            <p>My live applications and other miscellaneous works.</p>
+
+
+        <div id="project-list">
+            <div class="proj-container">
+				<div class="proj-thumbnail" style="background-image: url('img/tapas_icon.PNG');"></div>
+				<div class="proj-desc">
+					<h3>tapasitaliano.com</h3>
+					<p>A single-page website for local restaurant/lounge.</p>
+				</div>
+			</div>
+            <div class="proj-container">
+				<div class="proj-thumbnail" style="background-image: url('img/dotcomics_icon.png');"></div>
+				<div class="proj-desc">
+					<h3>dotComics</h3>
+					<p>A web application to read, share and create comics.</p>
+				</div>
+			</div>
+          
+			<div class="proj-container">
+				<div class="proj-thumbnail" style="background-image: url('img/ttt_icon.png');"></div>
+				<div class="proj-desc">
+					<h3>Tic Tac Toe</h3>
+					<p>A simple game of Tic Tac Toe.</p>
+				</div>
+			</div>
+           
+
+        </div>
+    </div>
+    <div class="progress">
+        <a href="#3" onclick="navigate('#slide4');" style="color: white;">progress ></a>
+    </div>
+</div>
+<div id="slide4" class="slides">
+    <div id="goals" class="content">
+        <h1>Aim</h1>
+        <div class="words">
+            <p>I aim to pursue my passions, build my career, make a difference and inspire others to do the same.
+
+            </p>
+            <div id="links" style="width:100%; text-align: center; margin: 0 auto;">
+            <a href="http://www.linkedin.com/in/john-dilag" target="_tab">
+                <img src="img/linkedin_icon.png"/></a>
+                <p style="display: inline; font-size: 50px;">/</p>
+            <a href="http://www.github.com/jsdilag" target="_tab">
+                <img src="img/github_icon.png"/></a>
+                <p style="display: inline; font-size: 50px;">/</p>
+                <a href="https://www.dropbox.com/s/08vkgryrys5p1ja/CS%20Resume%20Final.pdf?dl=0"
+                   target="_tab" style="color: white">
+                    <img src="img/resume_icon.png" alt="resume"/>
+                </a>
+            </div>
+            <br/>
+            <a href="#4" onclick="fly()" style="color: black;">progress ></a>
+
+        </div>
+    </div>
+    <div id="rocket"></div>
+    <div style="width: 100%; text-align: center; bottom: 20px; position: absolute; ">
+    <span style="">Copyright &copy; 2016 John Dilag</span>
+    </div>
+</div>
+<script>
+    $(window).load(function() {
+        $("#slide1").fullSlide();
+    });
+
+    (function($) {
+        $.fn.fullSlide = function(){
+            var slide1 = $(this);
+
+            function resizeSlide1() {
+                var winheight = $(window).height();
+                slide1.height(winheight);
+            }
+
+            resizeSlide1();
+            $(window).resize(function() {
+                resizeSlide1();
+            });
+        };
+    })(jQuery);
+</script>
+<script>
+    function navigate(endpoint){
+        var endpointTop = $(endpoint).offset().top;
+        $('html, body').animate({
+            scrollTop: endpointTop
+        }, 500);
+    }
+
+    function fly() {
+        var newWidth;
+        if ($(window).width() < 468)
+            newWidth = '400px';
+        else
+            newWidth = '800px';
+
+        $('#rocket').animate({
+            'margin-left': newWidth,
+            'margin-top': '-400px'
+        }, 1500);
+
+//        $('#rocket').css({
+//            'margin-left': '-150px',
+//            'margin-right': '200px'
+//        });
+    }
+
+    if($(window).width() >= 768) {
+        $('#slide1').hover(function () {
+            $(this).css({
+                'background-position': 'top'
+            });
+            $('#intro').css({
+                'opacity': 1
+            });
+        });
+
+
+    $('#slide3').hover(function(){
+        $("#slide3 h1").typed({
+            strings: ["Liev", "Livw", "Live"],
+            typeSpeed: -3
+        });
+    });
+
+        $('#slide2').hover(function () {
+            $('hr').css({'opacity': '1'});
+            $('hr').animate({
+                'width': '270px'
+            }, 1000)
+        });
+
+
+    }
+    //////////////////////////////////////////////////////////////
+                    //MOBILE VIEW//
+    //////////////////////////////////////////////////////////////
+
+    if($(window).width() < 768){
+        $('#slide1').css({
+            'background-position': 'top'
+        });
+        $('#intro').css({
+            'opacity': 1
+        });
+
+    var $window = $(window),
+            $s3Top = $('#slide3').offset().top,
+            $s1Top = $('#slide1').offset().top,
+            $s2Top = $('#slide2').offset().top,
+            $s4Top = $('#slide4').offset().top;
+
+    $window.scroll(function() {
+        if ($window.scrollTop() > $s3Top) {
+            $("#slide3 h1").typed({
+                strings: ["My Live", "Live"],
+                typeSpeed: -3
+            });
+        }
+        else if($window.scrollTop() >= $s1Top){
+//            $('#slide1').css({
+//                'background-position': 'top'
+//            });
+//            $('#intro').css({
+//                'opacity': 1
+//            });
+        }
+        if($window.scrollTop() > $s2Top){
+            $('hr').css({ 'opacity': '1' });
+            $('hr').animate({
+                'width': '210px'
+            }, 1000)
+        }
+    })
+    }
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<head>-->
+<!--<title>Live projects</title>-->
+<!--<link href='https://fonts.googleapis.com/css?family=Inconsolata:400, 700' rel='stylesheet' type='text/css'>-->
+<!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+
+<!--<link rel="stylesheet" href="stylesheet/main.css">-->
+<!--<link rel="stylesheet" href="stylesheet/nav.css">-->
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+<!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+
+<!--<meta name="author" content="John Dilag">-->
+<!--<meta name="description" content="My personal website">-->
+<!--<meta name="keywords" content="John Dilag, software engineer, software developer, computer science, programmer,-->
+<!--pineapple martini with a sprinkle of code chaser">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="nav"></div>-->
+<!--<div class="cont">-->
+<!--<div class="body-cont">-->
+<!--<div class="header">-->
+<!--<div id="prof-div"><img src="img/profile.PNG"/></div>-->
+<!--</div>-->
+<!--<div class="content">-->
+
+<!--<h1>My Live Projects</h1>-->
+<!--<p><em>These are projects I have worked on that are currently live. Feel free to click one to demo-->
+<!--it yourself.</em></p>-->
+<!--<a href="http://www.6.dotcomics-v2.appspot.com" target="_tab">-->
+<!--<div class="proj-container">-->
+<!--<div class="proj-thumbnail" style="background-image: url('img/dotcomics_icon.png');"></div>-->
+<!--<div class="proj-desc">-->
+<!--<h3>dotComics</h3>-->
+<!--<p>A web application to read, share and create comics.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</a>-->
+<!--<a href="http://www.jd-tictactoe.appspot.com" target="_tab">-->
+<!--<div class="proj-container">-->
+<!--<div class="proj-thumbnail" style="background-image: url('img/ttt_icon.png');"></div>-->
+<!--<div class="proj-desc">-->
+<!--<h3>Tic Tac Toe</h3>-->
+<!--<p>A simple web application of Tic Tac Toe.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</a>-->
+
+<!--<br>-->
+<!--<h1>My Other Works</h1>-->
+<!--<a href="http://www.jsdcloud.com/john/kenopsia.html" target="_tab">-->
+<!--<div class="proj-container">-->
+<!--<div class="proj-thumbnail" style="background-image: url('img/kenop_icon.png');"></div>-->
+<!--<div class="proj-desc">-->
+<!--<h3>Kenopsia</h3>-->
+<!--<p>A short 3D animation built with Blender.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</a>-->
+
+<!--<a href="https://www.dropbox.com/sh/ro0fdvfcge43xlf/AAC0c2Jnv35TCftHXRixqI5Va?dl=0"-->
+<!--target="_tab">-->
+<!--<div class="proj-container">-->
+<!--<div class="proj-thumbnail" style="background-image: url('img/algs_icon.png');"></div>-->
+<!--<div class="proj-desc">-->
+<!--<h3>Algorithmic problem solutions</h3>-->
+<!--<p>A collection of solutions (sorting, time complexity, Dijktstra's, etc) written in LaTeX.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</a>-->
+
+
+<!--<a href="http://www.johndilag.weebly.com" target="_tab">-->
+<!--<div class="proj-container">-->
+<!--<div class="proj-thumbnail" style="background-image: url('img/techcomm_icon.png');"></div>-->
+<!--<div class="proj-desc">-->
+<!--<h3>Technical Communications papers</h3>-->
+<!--<p>A Weebly website for a collection of works (e.g. literature review on machine learning).</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</a>-->
+
+<!--<br><br><br>-->
+
+<!--<h1></h1>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--$(document).ready(function(){-->
+<!--$('#nav').load('nav.html');-->
+
+<!--});-->
+
+<!--</script>-->
+<!--</body>-->
+
+<!--</html>-->

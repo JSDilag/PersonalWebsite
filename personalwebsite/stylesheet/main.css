@@ -1,0 +1,426 @@
+body{
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden*/
+}
+
+h1{
+    margin: 0;
+    font-size: 50px;
+    font-weight: 900;
+
+}
+
+h2{
+    font-size: 25px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+h1,h2,h3{
+    font-family: Lato;
+
+}
+
+p, a{
+    font-family: Lato;
+}
+
+#preloader{
+    height: 100%;
+    width: 100%;
+    background-color: #0d0d0d;
+    z-index: 9999;
+    position: absolute;
+}
+.progress{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: underline;
+
+}
+
+.slides{
+    width: 100%;
+
+}
+#slide1{
+    background: white url("../img/dumbos_view.JPG") no-repeat center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-transition: background-position 2s;
+    -moz-transition: background-position 2s;
+    -o-transition: background-position 2s;
+    transition: background-position 2s;
+
+}
+
+#intro{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    opacity: 0;
+    color: aliceblue;
+    box-sizing: border-box;
+    padding: 40px;
+    -webkit-transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -o-transition: opacity 2s;
+    transition: opacity 2s;
+    -webkit-transition-delay:  1s;
+    -moz-transition-delay:  1s;
+    -o-transition-delay:  1s;
+    transition-delay:  1s;
+
+}
+
+#intro-wrap{
+    max-width: 700px;  margin: 0 auto; margin-top: 150px; text-align: center
+}
+
+.content{
+    width: 968px;
+    margin: 0 auto;
+    padding: 100px 20px 20px 20px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+#slide2{
+    height:  700px;
+    background: whitesmoke url("../img/crossword/crossword.png") repeat left top;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+}
+
+
+
+#sbulogo{
+    bottom: 0;
+    margin-bottom: -150px;
+    margin-left: -160px;
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    z-index: -1;
+    background: whitesmoke url("../img/sbu_logo.png") no-repeat center center;
+    background-size: contain;
+    opacity: .3;
+
+}
+
+
+
+#brief{
+    color: #161616;
+    position: relative;
+}
+
+hr{
+    width: 0;
+    opacity: 0;
+    margin-left: 10px;
+    display:inline-block;
+    border-color: black;
+}
+
+#profile{
+    width: 400px;
+    float: right;
+    text-align: center;
+
+}
+
+#profile img{
+    width: 80%;
+}
+
+.words{
+    line-height: 150%;
+    width: 400px;
+    font-size: 20px;
+    float: left;
+}
+
+
+#slide3{
+    height: 700px;
+    background: whitesmoke url("../img/binding_dark/binding_dark.png") repeat left top;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    color: whitesmoke;
+}
+
+#slide3 a{  color: white; text-decoration: none; }
+
+.slide3-decor{  color: #dbb355;  }
+
+#opentag{
+    top: -20px;
+    left: 10px;
+    font-size: 60px;
+    position: absolute;
+
+
+}
+
+#closetag{
+    bottom: -20px;
+    left: 10px;
+    font-size: 60px;
+    position: absolute;
+}
+
+.proj-container{
+    width: 550px;
+    height: 110px;
+    background: rgba(0,0,0, 0);
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row;
+}
+
+.proj-container:hover{
+    background: rgba(0,0,0, .1);
+}
+
+.proj-thumbnail{ width: 80px; height: 80px; background-size: cover; border-radius: 50%;
+float: left; margin: 10px; margin-right:10px; position: relative;}
+
+
+#project-list{
+    width: 600px;
+    margin: 40px 0 0 0;
+}
+
+.proj-desc{
+    width: 435px;
+    float:left;
+    position: relative;
+    box-sizing: border-box;
+    padding: 5px;
+    text-align: left;
+}
+
+#project-list h3{  margin: 5px 0 5px 0;  }
+
+#project-list p{  margin: 5px 5px 0 0;  }
+
+#slide4{
+    background: whitesmoke url("../img/stardust/stardust.jpg") repeat left top;
+    color: #121212;
+    height: 500px;
+    overflow:hidden;
+    position: relative;
+
+}
+
+#rocket{
+    margin-top: 200px;
+    margin-left: -150px;
+    /*margin-bottom: -200px;*/
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 2;
+    background: rgba(0,0,0,0) url("../img/rocket_ship.png") no-repeat left bottom;
+    background-size: contain;
+    /*opacity: .3;*/
+
+}
+
+#links img{
+    width: 50px;
+    padding: 10px 10px 0 10px;
+}
+
+.typed-cursor{
+    font-size: 50px;
+    opacity: 1;
+    -webkit-animation: blink 1s infinite;
+    -moz-animation: blink 1s infinite;
+    animation: blink 1s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@media only screen and (max-width: 767px){
+    h1{
+        font-size: 32px;
+        display: inline;
+    }
+    h2{
+        font-size: 24px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    p,a{
+        font-size: 16px;
+    }
+
+    .slides{
+        /*display: flex;*/
+        /*flex-flow: column;*/
+        /*height: auto;*/
+    }
+    .content{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 40px 15px 20px 15px;
+        /*display: flex;*/
+        /*flex-flow: column;*/
+        /*height: auto;*/
+        /*text-align: center;*/
+    }
+
+
+    #brief-wrap{
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+    }
+
+    .words{
+        width: 100%;
+    }
+    #profile{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    #profile img{
+        width: 250px;
+    }
+
+    /*hr{*/
+        /*width: 250px;*/
+    /*}*/
+
+    .typed-cursor{
+        font-size: 32px;
+    }
+
+    #project-list{
+        width: 100%;
+    }
+    .project-container{
+        width: 100%;
+    }
+
+    .proj-desc{
+        width: 230px;
+        text-align: left;
+    }
+
+    #slide3{
+        height: 600px;
+    }
+
+    #slide2{
+        height: 850px;
+    }
+
+    #slide4{
+        height: 400px;
+    }
+
+    #slide1{
+        background-size: auto 800px;
+        -webkit-transition-delay:  2s;
+        -moz-transition-delay:  2s;
+        -o-transition-delay:  2s;
+        transition-delay:  2s;
+    }
+
+    #intro{
+        -webkit-transition-delay:  2s;
+        -moz-transition-delay:  2s;
+        -o-transition-delay:  2s;
+        transition-delay:  2s;
+        padding: 20px;
+    }
+
+    #intro > div{
+        margin-top: 80px;
+    }
+
+
+
+
+
+
+
+}
+/*body{ font-family: Rockwell; font-weight: 700; margin: 0; padding: 0;*/
+  /*font-size: 18px; background-color: #dce3e3}*/
+
+/*h1{ font-size: 40px;} p{ font-weight: 300;}*/
+
+/*h1, h2, h3{font-weight: bold;}*/
+
+/*.cont {  width: 100%; height: 100%; margin: 0 auto; padding-top: 40px;*/
+  /*!*background: linear-gradient(#588c8b, rgba(102, 133, 139, 0.81))*!;*/
+  /*background-color: #dce3e3;*/
+  /*padding-bottom: 0;}*/
+
+/*.cont a{  color: black; }*/
+
+/*.cont a:hover{*/
+  /*text-decoration: none;}*/
+
+/*.body-cont{margin: 0 auto; padding-left: 30px; padding-right: 30px;width: 70%; height: 100%;*/
+  /*background-color: white; box-shadow: 0 0 12px #656565;}*/
+
+/*.header{padding-top: 80px;}*/
+
+/*.content{width: 550px; margin: 0 auto;}*/
+
+/*#prof-div{ margin: 0 auto; text-align: center;}*/
+
+/*#prof-div img{ width: 280px; }*/
+
+/*.proj-container{ width: 550px; height: 130px; background-color: #dce3e3;*/
+   /*margin-bottom: 10px;}*/
+
+/*.proj-container:hover{background-color: #c8cfcf  }*/
+
+/*.proj-thumbnail{ width: 120px; height: 120px; background-size: cover; border-radius: 50%;*/
+/*float: left; margin: 5px; margin-right:10px}*/
+
+/*.proj-desc{padding-top: 5px; padding-left: 10px; height: 200px; }*/
+
+/*.links-dropdown{ color: white; padding: 0px;}*/
+
+/*.links-menu { display: none; background-color: black; width: 200px;*/
+  /*list-style-type: none; position: absolute; color: white;  font-weight: normal;}*/
+
+/*.links-menu li{height: 60px; display: inline-block;  position: relative; }*/
+
+/*.links-menu li a {color: white;  font-size: 20px; padding-top: 10px; padding-right: 10px;  }*/
+
+/*.links-menu li a:hover {  color: crimson; text-decoration: none}*/
+
+/*.links-menu img {width: 30px; padding-right: 5px; padding-bottom: 5px}*/
